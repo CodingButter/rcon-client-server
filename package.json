@@ -1,0 +1,28 @@
+{
+  "name": "manage-minecraft",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@rauschma/stringio": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "https": "^1.0.0",
+    "minecraft-server-util": "^3.1.0",
+    "png-stream": "^1.0.5",
+    "rcon-client": "^4.2.3",
+    "uniqid": "^5.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
