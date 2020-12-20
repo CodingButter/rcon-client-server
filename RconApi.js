@@ -80,6 +80,7 @@ app.get(`${API}/send`,cors(), (req, res) => {
         })
         res.json(
             ReturnResponse({
+                connection:connection.status,
                 status: "success",
                 uid:responseUID
             })
@@ -98,6 +99,7 @@ app.get(`${API}/response`,cors(), (req, res) => {
     if (connection) {
         connection.pinged = Date.now();
         res.json(ReturnResponse({
+            connection:connection.status,
             status:"success",
             response: connection.response
         }))
@@ -142,7 +144,7 @@ setInterval(() => {
         total: connections.length,
         active: connections.filter(({ status }) => status == "connected").length
     })
-},IDLE_TIME/10)
+},IDLE_TIME)
 
 }
 
