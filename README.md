@@ -13,7 +13,7 @@ https://codingbutter.com:2080/rcon/
 # Enpoints and Responses
 ### connect
 ```
-    https://codingbutter.com:2080/rcon/connect
+https://codingbutter.com:2080/rcon/connect
 ```
 #### expected url params
 | Parameter | Description | Example |
@@ -43,15 +43,15 @@ https://codingbutter.com:2080/rcon/
 #### Fetch example 
    
 ```javascript
-    fetch("https://codingbutter.com?host=server.domain.com&port=25575&password=rconpass")
-    .then(res=>res.json())
-    .then(json=>{
-        console.log({json.uid}) //Returns unique connection id example kri9rkkiybjgyw  
-    })
+fetch("https://codingbutter.com?host=server.domain.com&port=25575&password=rconpass")
+.then(res=>res.json())
+.then(json=>{
+    console.log({json.uid}) //Returns unique connection id example kri9rkkiybjgyw  
+})
 ```
 ### status
 ```
-    https://codingbutter.com:2080/rcon/status
+https://codingbutter.com:2080/rcon/status
 ```
 #### expected url params
 | Parameter | Description | Example |
@@ -75,17 +75,17 @@ https://codingbutter.com:2080/rcon/
 #### Fetch example 
    
 ```javascript
-    fetch("https://codingbutter.com:2080/rcon/status?uid=kri9rkkiybjgyw")
-    .then(res=>res.json())
-    .then(json=>{
-        console.log({json.status}) // Response from the rcon server example "connected"  
-    })
+fetch("https://codingbutter.com:2080/rcon/status?uid=kri9rkkiybjgyw")
+.then(res=>res.json())
+.then(json=>{
+    console.log({json.status}) // Response from the rcon server example "connected"  
+})
 ```
 
 
 ### send
 ```
-    https://codingbutter.com:2080/rcon/send
+https://codingbutter.com:2080/rcon/send
 ```
 #### expected url params
 | Parameter | Description | Example |
@@ -95,13 +95,13 @@ https://codingbutter.com:2080/rcon/
 
 ### Successful Response Example
 ```json
-    {
-        "connection":"connected",
-        "status":"success",
-        "response":{
-            "uid":"kri48wkiycl7bt",
-            "body":"Gave 1 [Diamond Sword] to CodingButter\n"
-        }}
+{
+    "connection":"connected",
+    "status":"success",
+    "response":{
+        "uid":"kri48wkiycl7bt",
+        "body":"Gave 1 [Diamond Sword] to CodingButter\n"
+    }}
 ```
 
 ### Unsuccessful Response Example
@@ -112,9 +112,9 @@ https://codingbutter.com:2080/rcon/
 #### Fetch example 
    
 ```javascript
-    fetch("https://codingbutter.com:2080/rcon/send?uid=kri9rkkiybjgyw&command=give%20CodingButter%20minecraft:diamond_swords")
-    .then(res=>res.json())
-    .then(json=>{
-        console.log({json.response.body}) // Response from the rcon server example "Gave 1 [Diamond Sword] to CodingButter\n"  
-    })
+fetch("https://codingbutter.com:2080/rcon/send?uid=kri9rkkiybjgyw&command=give%20CodingButter%20minecraft:diamond_swords")
+.then(res=>res.json())
+.then(json=>{
+    console.log({json.response.body}) // Response from the rcon server example "Gave 1 [Diamond Sword] to CodingButter\n"  
+})
 ```
