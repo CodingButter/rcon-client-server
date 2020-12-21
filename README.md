@@ -24,7 +24,7 @@ https://codingbutter.com:2080/rcon/connect
 
 #### Successful Response Example
 ```json
-    {"status":"connected","uid":"kri9rkkiybjgyw"}
+{"status":"connected","uid":"kri9rkkiybjgyw"}
 ```
 
 #### Unsuccessful Response Example
