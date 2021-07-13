@@ -1,5 +1,7 @@
 const alphaChars = "abcdefghijk".split("");
 const chars = "0123456789.".split("");
+const { spawn } = require("child_process");
+
 const ipToLetters = (ip) => {
   const splitIp = ip.split("");
   return splitIp.map((ch) => alphaChars[chars.indexOf(ch)]).join("");

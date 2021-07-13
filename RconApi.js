@@ -2,7 +2,7 @@ const cors = require("cors");
 const DotEnv = require("dotenv");
 const { Rcon } = require("rcon-client");
 const uniqid = require("uniqid");
-const {ipToLetters}
+const toIp = require("./ToIp");
 
 DotEnv.config();
 
@@ -145,6 +145,12 @@ function RconApi(app) {
         })
       );
     }
+  });
+
+  app.get(`${API}/toip`, cors(), async (req, res) => {
+    const { ipdomain } = req.query;
+    const ip = await toIp(ipdomain);
+    res.json({ ip });
   });
 
   setInterval(() => {
