@@ -38,8 +38,15 @@ async function getSkinUrl(userJson){
 
 
 function MinecraftProfileApi(app) {
-
     
+app.get(`${API}/getuid`, cors(), (req, res) => {
+  const { username } = req.query;
+  getUserId(username).then(({ id }) => {
+      res.json({ id })
+    });
+  });
+});
+
 app.get(`${API}/gethead`,cors(), (req, res) => {
     const { username } = req.query;
     getUserId(username)
